@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --color-primary: #ff6b00;
+  --color-accent-amber: #ffb300;
+  --color-accent-purple: #6a0dad;
+  --color-background-light: #1a1a1a;
+  --color-background-dark: #050505;
+}
+
+@layer base {
+  body {
+    @apply bg-background-dark text-slate-100 font-display selection:bg-primary/30;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  
+  .neon-border {
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.3);
+  }
+  
+  .hero-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(255, 107, 0, 0.12) 0%, rgba(106, 13, 173, 0.05) 40%, rgba(5, 5, 5, 1) 100%);
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
